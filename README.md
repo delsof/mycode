@@ -1,5 +1,6 @@
 # mycode
 Learning to track my code
+Practicing on how to version control projects with git.
 
 Student interested in Python and Network Automation
 
