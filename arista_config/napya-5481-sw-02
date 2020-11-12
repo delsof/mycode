@@ -1,0 +1,22 @@
+! Command: show running-config
+! device: napya-5481-sw-02 (vEOS, EOS-4.22.0F)
+!
+! boot system flash:/vEOS-lab.swi
+!
+transceiver qsfp default-mode 4x10G
+!
+hostname napya-5481-sw-02
+!
+spanning-tree mode mstp
+!
+no aaa root
+!
+username admin role network-admin secret sha512 $6$TldHbMKes4wmC64F$ccWKa3qNdxAINt6c1y8TGfbG4C9/1NVC0g5YSjAcpkDdeNz3KIiV0qSGUwXe0ea/adb2k/mt/Zw69xEI743Oq0
+!
+interface Management1
+   ip address dhcp
+   dhcp client accept default-route
+!
+no ip routing
+!
+end
