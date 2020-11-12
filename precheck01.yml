@@ -1,0 +1,16 @@
+---
+- name: Building Precheck Failures
+  # The line below uses regex to parse the inventory file
+  hosts: ~^arista
+  connection: network_cli
+  become: yes
+  become_method: enable
+  gather_facts: yes # this defines ansible_facts (it runs *_facts on the target network switches)
+
+  tasks:
+
+  # dig into the data we want to reveal
+  - name: Getting at network interfaces
+    debug:
+     var: ansible_facts
+
